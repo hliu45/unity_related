@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody rb;
     public float speed;
+    public float thrust;
 
     private void Start()
     {
@@ -20,5 +21,10 @@ public class PlayerController : MonoBehaviour {
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
+
+        if (Input.GetKeyDown("space"))
+        {
+            rb.AddForce(0, thrust, 0, ForceMode.Impulse);
+        }
     }
 }
