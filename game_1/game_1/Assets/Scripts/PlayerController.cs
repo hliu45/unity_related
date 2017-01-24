@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     private int count;
     public Text countText;
     public Text winText;
+    public Text explanText;
     private float moveHorizontal;
     private float moveVertical;
     private Vector3 movement;
@@ -23,7 +24,8 @@ public class PlayerController : MonoBehaviour {
         count = 0;
         rb = GetComponent<Rigidbody>();
         SetCountText();
-        winText.text = "";  
+        winText.text = "";
+        explanText.text = "mission 1: get all the golden capsule";  
     }
 
     private void FixedUpdate()
@@ -106,6 +108,7 @@ public class PlayerController : MonoBehaviour {
         if (count >= 100)
         {
             winText.text = "You Win!!";
+            explanText.text = "mission 1 complete";
         }
     }
 }

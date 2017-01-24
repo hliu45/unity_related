@@ -49,7 +49,7 @@ public class CameraController : MonoBehaviour {
         else if (player.transform.position.y < 6.01f && player.transform.position.y > 4.97f && player.transform.position.x < 2.0f && 
             player.transform.position.x > -4.7f && player.transform.position.z < 1.3f && player.transform.position.z > -3.5f)
         {
-            transform.position = new Vector3(-8.49f, 8.8f, 0.52f); //camera position
+            transform.position = new Vector3(-8.49f, 8.8f, 0.5f); //camera position
             transform.eulerAngles = new Vector3(37.6f, -272.2f, 0);
             target = new Vector3(-8.49f, 8.8f, 0.2f);
             offset = target - player.transform.position;
